@@ -12,7 +12,7 @@ class Polygon
     ->(i) { new(i) }
   end
 
-  def contains?(point) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+  def contains?(point)
     last_point = @points[-1]
     odd_nodes = false
     x = point.lon

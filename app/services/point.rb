@@ -20,6 +20,10 @@ class Point
     raise 'Not valid json'
   end
 
+  def to_json
+    { type: 'Point', coordinates: [@lon, @lat] }.to_json
+  end
+
   def self.to_proc
     ->(i) { new(i) }
   end
