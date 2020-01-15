@@ -1,24 +1,15 @@
-# README
+# GEOCODER ASSIGNMENT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`GET https://geocoder-assignment.herokuapp.com/` - list all polygons
 
-Things you may want to cover:
+`GET https://geocoder-assignment.herokuapp.com/inside?point={"type":"Point","coordinates":[9.4797461,51.3127114]}` - geofence the geojson point
 
-* Ruby version
+`POST https://geocoder-assignment.herokuapp.com/locations` - geocode the point
 
-* System dependencies
+payload body - `{
+	"location": {
+		"name": "Location name"
+    }
+}`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`GET https://geocoder-assignment.herokuapp.com/locations/:id` - get the geocoded results
